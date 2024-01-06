@@ -14,11 +14,17 @@ export class GoblinGame {
     startGame() {
         this.spawnGoblin();
         setInterval(() => {
+            this.misses++;
             this.spawnGoblin();
           }, 1000);
     }
 
     spawnGoblin() {
+        if (this.misses >= this.maxMisses) {
+            alert('Game over');
+            return;
+        } 
+
         const img = this.grid.createGoblinIcon();
         let currentCell = this.grid.getRandomCell();
       
@@ -33,7 +39,7 @@ export class GoblinGame {
         setTimeout(removeGoblin, 1000);
       
         currentCell.onclick = () => {
-          this.score++;
+          this.misses--;
           removeGoblin();
         };
       }
