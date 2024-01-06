@@ -1,0 +1,7 @@
+npm install --save-dev webpack // установка вебпак
+npm install --save-dev webpack-cli // для работы с терминалом
+npm install --save-dev html-webpack-plugin // для работы с html
+npm install --save-dev css-loader
+npm install --save-dev mini-css-extract-plugin
+npm install --save-dev webpack-dev-server
+npm install --save-dev babel-loader

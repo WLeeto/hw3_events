@@ -1,0 +1,7 @@
+.game-field__row {
+    display: flex;  
+}
+  
+.game-field__cell {
+    border: 1px solid black;
+}
